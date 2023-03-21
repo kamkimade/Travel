@@ -1,0 +1,309 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.block-center {
+  margin: 0 auto;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(323.15deg, #2262B9 -116.82%, #2AB7FA 149.41%);
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.header__inner {
+  padding: 57px 0 26px;
+  width: 1720px;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  width: 50%;
+  animation: slideRight 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__nav-item {
+  margin-right: 80px;
+  animation: slideDown 0.6s ease;
+}
+.header__nav-item:last-child {
+  margin-right: 67px;
+}
+.header__nav-link {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  letter-spacing: 0.45px;
+  color: #868686;
+  position: relative;
+}
+.header__nav-link::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  background: #868686;
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+.header__nav-link:hover::after {
+  transform: scaleX(1);
+}
+.header__btn {
+  padding: 16px 24px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 32px;
+  text-align: center;
+  border: 2px solid #2AB7FA;
+  color: #FFFFFF;
+  transition: 0.3s;
+  animation: slideLeft 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.header__btn:hover {
+  color: #242424;
+  border: 2px solid #2262B9;
+  background: transparent;
+  box-shadow: 0 0 10px #2AB7FA;
+}
+
+@keyframes forwardBackAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes yachtAnim {
+  0% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(10px) rotate(1deg);
+  }
+}
+@keyframes womanRotateAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes splashAnim {
+  0% {
+    transform: scale(0) translateX(0);
+  }
+  30% {
+    transform: scale(1) translateX(-20px);
+  }
+  30.1% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+    visibility: visible;
+  }
+}
+@keyframes splashAnim2 {
+  0% {
+    transform: scale(0) rotateY(180deg);
+  }
+  30% {
+    transform: scale(1) rotateY(180deg);
+  }
+  30.1% {
+    transform: scale(0) rotateY(180deg);
+  }
+  100% {
+    transform: scale(0) rotateY(180deg);
+  }
+}
+.main {
+  margin-bottom: 50px;
+}
+.main__inner {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__content {
+  width: 1175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 94px;
+  line-height: 114px;
+  text-align: center;
+  color: #404041;
+}
+.main__descr {
+  margin-bottom: 12px;
+  max-width: 888px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: 0.45px;
+  color: #868686;
+}
+.main__btn {
+  padding: 25px 65px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  text-shadow: -2px -2px 4px #000;
+  color: #FFFFFF;
+}
+.main__btn:hover {
+  text-shadow: none;
+}
+
+.hero {
+  width: 100%;
+  height: 706px;
+  background: url("../img/bg.svg") no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+  position: relative;
+}
+.hero__cloud-big {
+  position: absolute;
+  top: 92px;
+  left: 147px;
+  animation: forwardBackAnim 1.5s linear infinite alternate;
+}
+.hero__cloud-small {
+  position: absolute;
+  top: 150px;
+  right: 42px;
+  animation: forwardBackAnim 1.5s linear infinite alternate;
+}
+.hero__wave-1 {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  animation: 1.5s linear 1s infinite alternate forwardBackAnim;
+}
+.hero__wave-2 {
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+  animation: 1.5s linear infinite alternate-reverse forwardBackAnim;
+}
+.hero__yacht {
+  position: absolute;
+  bottom: 162px;
+  left: 0;
+  animation: 1.5s linear infinite alternate yachtAnim;
+}
+.hero__woman-leg {
+  position: absolute;
+  bottom: 50%;
+  left: 63.5%;
+  transform-origin: top left;
+  animation: 1s linear infinite alternate womanRotateAnim;
+}
+.hero__woman-body {
+  position: absolute;
+  top: -0.5%;
+  left: 10.6%;
+  transform-origin: bottom;
+  animation: 1.5s linear infinite alternate womanRotateAnim;
+}
+.hero__wave-3 {
+  position: absolute;
+  bottom: -5px;
+  left: 220px;
+  animation: 1s linear infinite alternate forwardBackAnim;
+}
+.hero__splash {
+  position: absolute;
+  bottom: 6%;
+  left: 10%;
+  transform-origin: bottom right;
+  animation: 2s linear infinite splashAnim;
+}
+.hero__splash2 {
+  position: absolute;
+  bottom: 36%;
+  right: 12%;
+  transform-origin: bottom right;
+  animation: 2s linear 2s infinite splashAnim2;
+}/*# sourceMappingURL=style.css.map */
